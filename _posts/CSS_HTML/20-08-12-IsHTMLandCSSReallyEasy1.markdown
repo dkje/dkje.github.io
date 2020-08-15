@@ -2,7 +2,7 @@
 layout: post
 title: '1. HTML과 CSS 그냥 코딩하면 되나요?'
 subtitle: ' 개발자들은 왜 HTML과 CSS를 싫어할까 '
-date: 2020-08-11 23:40:00
+date: 2020-08-12 23:40:00
 author: 'Dev X'
 header-img: 'img/post-bg/post-bg-CSS3_and_HTML5.png'
 catalog: true

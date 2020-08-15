@@ -2,7 +2,7 @@
 layout: post
 title: '2. 웹표준과 웹접근성'
 subtitle: ' 그때부터였을까.. HTML CSS가 까칠해지기 시작한게... '
-date: 2020-08-11 23:40:00
+date: 2020-08-12 23:46:00
 author: 'Dev X'
 header-img: 'img/post-bg/post-bg-CSS3_and_HTML5.png'
 catalog: true
