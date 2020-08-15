@@ -175,7 +175,7 @@ function char(aa) {
 
 ## 6\. 내 기억력을 자랑하지 말자
 
-전편([1\. 어떤 개발자가 돼야 할까?)](../CleanCodeSeries1)에서 내가 지었던 끔찍한 이름 중 적절한 예시가 있다. 바로 CDA이다. CDA는 CustomerDataAdapter의 약자로 서버에서 받아오는 고객 정보 데이터를 프런트에서 쓰기 좋은 양식으로 맞춰주는 함수였다. 긴 이름이 코드를 길게 만드니 짧게 쓰는 게 좋겠다는 취지의 이름이었고, 한 달 뒤에 그 코드를 다시 열어보았을 때 함수 내 constructor를 다 읽고 나서야 그 CDA의 풀 네임을 다시 떠올리게 되었다. 그것도 CDA의 A가 Adapter라는 것만 기억해내고 D가 Data인지 Description인지 아니면 또 다른 무엇인지는 api 명세까지 확인해봐야 확실해졌을 것이다.
+전편([1\. 어떤 개발자가 돼야 할까?)](https://dkje.github.io/2020/07/29/CleanCodeSeries1/)에서 내가 지었던 끔찍한 이름 중 적절한 예시가 있다. 바로 CDA이다. CDA는 CustomerDataAdapter의 약자로 서버에서 받아오는 고객 정보 데이터를 프런트에서 쓰기 좋은 양식으로 맞춰주는 함수였다. 긴 이름이 코드를 길게 만드니 짧게 쓰는 게 좋겠다는 취지의 이름이었고, 한 달 뒤에 그 코드를 다시 열어보았을 때 함수 내 constructor를 다 읽고 나서야 그 CDA의 풀 네임을 다시 떠올리게 되었다. 그것도 CDA의 A가 Adapter라는 것만 기억해내고 D가 Data인지 Description인지 아니면 또 다른 무엇인지는 api 명세까지 확인해봐야 확실해졌을 것이다.
 
 우리는 종종 효율을 위해 약어를 사용할 때가 있다. for문의 i가 index라는 것은 모두가 이미 알고 있기 때문에 i로 적어도 문제가 없다. prop이 property라는 것도 str이 string라는 것도 전통적인 사용 예가 있기 때문에 가능한 사례이다. 하지만 나만 이해할 수 있는 약어 이름은 되도록 사용을 지양하자.
 
@@ -238,6 +238,6 @@ isApple라는 변수가 있다고 하자. isApple은 이 과일이 사과인지 
 
 ---
 
-\[클린 코드 정독 시리즈의 다른 글\]  
-[1. 어떤 개발자가 돼야 할까?](../CleanCodeSeries1)  
-[2. 변수명과 함수명 짓기](../CleanCodeSeries2)
+\[클린 코드 정독 시리즈\]  
+[1. 어떤 개발자가 돼야 할까?](https://dkje.github.io/2020/07/29/CleanCodeSeries1/)  
+[2. 변수명과 함수명 짓기](https://dkje.github.io/2020/08/03/CleanCodeSeries2/)

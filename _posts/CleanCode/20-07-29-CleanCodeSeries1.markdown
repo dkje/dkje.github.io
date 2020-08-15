@@ -58,6 +58,6 @@ tags:
 
 ---
 
-\[클린 코드 정독 시리즈의 다른 글\]  
-[1. 어떤 개발자가 돼야 할까?](../CleanCodeSeries1)  
-[2. 변수명과 함수명 짓기](../CleanCodeSeries2)
+\[클린 코드 정독 시리즈\]  
+[1. 어떤 개발자가 돼야 할까?](https://dkje.github.io/2020/07/29/CleanCodeSeries1/)  
+[2. 변수명과 함수명 짓기](https://dkje.github.io/2020/08/03/CleanCodeSeries2/)
