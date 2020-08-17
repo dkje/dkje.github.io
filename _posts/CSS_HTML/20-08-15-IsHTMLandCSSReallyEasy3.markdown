@@ -14,7 +14,7 @@ tags:
 
 ![얼굴이 뭔가 이상한 피카츄](https://i.ibb.co/x3LZ8Q2/image.jpg)
 
-_<center>HTML과 CSS의 중요성...</center>_
+_<center>HTML과 CSS도 계획없이 짜면 노답이다</center>_
 <br/><br/><br/>
 
 ### 1\. PC, 모바일 웹과 반응형 웹
@@ -46,6 +46,7 @@ PC, 모바일 웹을 제작하는 것은 어렵지 않습니다. 두 가지 디�
 ![목표 디자인의 PC뷰 스크린샷](https://i.ibb.co/vJnBRmF/2.png)
 
 **HTML**
+
 ```html
 <header>
     <h1><img src="./img/logo.png" alt="회사 로고" /></h1>
@@ -64,6 +65,7 @@ PC, 모바일 웹을 제작하는 것은 어렵지 않습니다. 두 가지 디�
 ```
 
 **CSS**
+
 ```css
 header {
     max-width: 1080px;
@@ -121,6 +123,7 @@ CSS의 단위에는 px, rem, em이 있습니다. px은 익숙해도 rem과 em이
 px을 기준으로 CSS를 작성했을 때의 문제점을 생각해봅시다. 브라우저에는 글꼴 크기를 변경할 수 있는 설정이 있습니다. 시력이 좋지 않은 사람들을 위해 브라우저의 기본 글꼴 크기를 조절하는 배려이죠. 하지만 px으로 제작된 사이트는 글꼴 크기의 변경이 있을 시, 자식 element가 부모 element의 크기보다 커질 수 있어 의도한 디자인과 다른 화면이 제공될 수 있습니다. 이런 사태를 방지하기 위해 기본 글꼴 사이즈를 강제하는 사이트도 있지만 반응형 웹은 가능한 유연한 디자인으로 높은 접근성을 제공하는 것이 목적입니다. rem을 사용하는 이유가 하나 더 있지만 잠시 후에 알아보겠습니다.
 
 **CSS**
+
 ```css
 html {
     font-size: 62.5%; /* 1rem=10px */
@@ -173,7 +176,8 @@ nav ul {
 
 미디어 쿼리는 기기의 정보에 따라 다른 CSS를 제공해야할때 사용하는 구문입니다.
 
-**CSS**  
+**CSS**
+
 ```css
 @media media-type and (media-feature-rule) {
     /* CSS rules go here */
@@ -183,7 +187,8 @@ nav ul {
 **media-type:** 제공할 media의 타입을 지정합니다. 타입은 all(모든 디바이스), print(출력), screen(전자기기), speech(음성)등이 있지만 반응형 디자인에 필요한 것은 **screen** 속성입니다.  
 **media-feature-rule:** 미디어 쿼리를 제공할 규칙을 정합니다. width, max-width, min-width, orientation(가로 or 세로 모드)등의 속성이 있습니다.
 
-**CSS**  
+**CSS**
+
 ```css
 @media screen and (max-width: 400px) {
     header a {
@@ -203,6 +208,7 @@ nav ul {
 그리고 반응형 디자인에서 rem을 사용하는 이유가 하나 더 있다고 말했었습니다. 그 이유는 rem과 미디어 쿼리를 함께 사용하면 더 유연한 디자인이 제공 가능하기 때문입니다. rem은 기기에 따라 상대적인 길이 값을 제공하지만 폰트 사이즈의 변화와 우리가 원하는 디자인의 크기가 rem만으로 충족되지 않을 때도 있습니다. 웹에선 적당했던 사진 크기가 모바일에선 너무 크거나 하는 경우 말이죠. 그럴땐 rem이 html의 폰트 사이즈를 기반으로 한다는 사실을 이용하면 편리하게 반응형 웹을 개발할 수 있습니다.
 
 **CSS**
+
 ```css
 @media screen and (max-width: 400px) {
     html {
@@ -236,15 +242,20 @@ _<center>현재 header의 모습입니다.</center>_
 
 ```html
 <header>
-        <h1><img src="./img/logo.png" alt="회사 로고"></h1>
-        <div><a href="#">장바구니</a><a href="#">내 정보</a><a href="#">로그아웃</a>
-        <button><img src="./img/button.png" alt="햄버거버튼" class="menu_btn"></button></div>
+    <h1><img src="./img/logo.png" alt="회사 로고" /></h1>
+    <div>
+        <a href="#">장바구니</a><a href="#">내 정보</a><a href="#">로그아웃</a>
+        <button>
+            <img src="./img/button.png" alt="햄버거버튼" class="menu_btn" />
+        </button>
+    </div>
 </header>
 ```
 
 링크들을 div로 묶고 끝에 button을 추가 했습니다.
 
 **CSS**
+
 ```css
 /* 미디어쿼리 상위에 추가 */
 header button img {
@@ -255,13 +266,9 @@ header button img {
 
 /* 미디어쿼리 수정 */
 @media screen and (max-width: 400px) {
-
-    ...
-
-    header button img {
+    ... header button img {
         display: block;
     }
-
 }
 ```
 
