@@ -1,0 +1,49 @@
+---
+layout: post
+title: 'Todo'
+subtitle: '  '
+date: 2099-12-30 09:13:00
+author: 'Dev X'
+header-img: 'img/post-bg/post-bg-til.jpg'
+catalog: true
+tags:
+    - todo
+---
+
+## Todos
+
+#### testrunner
+-   [Jasmine](https://jasmine.github.io/)
+-   [Mocha]()
+
+#### dom
+-   [dom과 js의 차이](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction#DOM_and_JavaScript)
+-   [createDocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment)
+-   [HTML Template](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)
+-   element와 node의 차이(difference between element and node in javascript dom)
+-   children과 childNodes의 차이(difference between children and childNodes in javascript dom)
+-   remove와 removeChild의 차이 (difference between removeChild and remove in javascript dom)
+-   offsetTop
+-   offsetWidth
+-   innerHTMl 보안상 단점
+-   tweets에 forEach는 되는데, reduce는 안되는 이유 (why array method is not working on nodelist)
+-   tweets를 유사 배열에서 배열로 바꾸는 방법 (how to convert nodelist into javascript array)
+-   mdn keyup event
+
+
+#### 고차함수
+-   커링(currying)과 클로져(closure)의 차이 이해하기 (js closure vs curry)
+-   선언형 프로그래밍(declarative programming)과 절차형 프로그래밍(imperative programming)의 차이를 배열 메소드를 통해 이해하기 (js imperative vs declarative)
+-   함수의 조합(function composition)에 대해 학습하기 (javascript function composition)
+
+
+#### JS 심화개념
+-   JavaScript 엔진이 어떠한 형태로 비동기 호출을 하는지 그 원리를 이해할 수 있다
+-   .bind() 메소드를 어느 때에 사용하는지 이해할 수 있다.
+-   각각의 경우 this 가 어떤 식으로 취급되는지 이해할 수 있다
+-   this 키워드에 값이 바인딩되는 5가지 룰에 대해서 이해할 수 있다.
+    - global this
+    - function invocation
+    - method invocation
+    - construction mode
+    - .call(), .apply()
