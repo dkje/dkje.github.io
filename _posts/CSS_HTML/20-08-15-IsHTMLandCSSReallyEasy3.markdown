@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '3. HTML과 CSS 그냥 코딩하면 되나요?'
+title: '3. 반응형 웹'
 subtitle: ' 최적화는 HTML과 CSS에서부터 '
 date: 2020-08-15 20:21:00
 author: 'Dev X'
