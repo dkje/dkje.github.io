@@ -46,7 +46,8 @@ HTML과 CSS... 쉽긴 쉽지만... 이젠 막 그렇게 쉽지도 않은 것 같
 
 **[HTML과 CSS 그냥 코딩하면 되나요? 시리즈]**  
 [1. HTML과 CSS가 쉽지만 어려운 이유](https://dkje.github.io/2020/08/12/IsHTMLandCSSReallyEasy1/)  
-[2. 웹표준과 웹 접근성](https://dkje.github.io/2020/08/12/IsHTMLandCSSReallyEasy2/)
+[2. 웹표준과 웹 접근성](https://dkje.github.io/2020/08/12/IsHTMLandCSSReallyEasy2/)  
+[3. 반응형 웹](https://dkje.github.io/2020/08/15/IsHTMLandCSSReallyEasy3/)
 <br/><br/><br/><br/>
 
 <center>
