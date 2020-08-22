@@ -16,7 +16,7 @@ tags:
 -   async & sync > promise > async await  
 -   CleanCode
 -   HTML CSS Series
--   
+-   js 단축 구문
 
 ## Todos
 

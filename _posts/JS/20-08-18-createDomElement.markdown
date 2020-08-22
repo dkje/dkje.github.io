@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'document node를 생성하는 세가지 방법'
+title: '[JS]Html Element를 생성하는 세가지 방법'
 subtitle: ' 단순 노동을 줄이고 편히 살고 싶다 '
 date: 2020-08-18 09:13:00
 author: 'Dev X'
@@ -15,7 +15,7 @@ tags:
     - Node
 ---
 
-## document node를 생성하는 노동
+## Html Element를 생성하는 노동
 
 js에서 dom을 다루다보면 가장 번잡한 일이 새로운 HTML Element를 만들어 추가하는 것 입니다. 사람마다 다르겠지만 저의 경우엔 js로 HTML Element를 생성하는 코드는 가독성도 떨어지고 단순 노동처럼 여겨졌던 것 같습니다. HTML Element를 생성하는 방법은 여러가지가 있는데요 오늘은 세 가지 방법을 예시로 들며 어느 쪽이 가장 생산성이 높은지 고민해보겠습니다.
 <br/><br/><br/>
