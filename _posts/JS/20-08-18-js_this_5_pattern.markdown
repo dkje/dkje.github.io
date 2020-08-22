@@ -180,7 +180,21 @@ const person = {
 person.sayHi();
 ```
 
-**arrow function**은 es6에 추가된 문법으로 함수를 익명으로 선언하는 또 다른 방법입니다. arrow function은 간결한 표현식 덕분에 재사용 되지 않는 짧은 함수를 표현할 경우 많이 사용되고 있습니다. arrow function의 특징은 모든 함수가 호출 시 자신의 this를 정의하는 것과 달리 **this가 바인딩되지 않는다**는 점입니다. 바로 직전, 즉 상위 scope의 this를 사용한다는 것이죠.
+```js
+let sam = {
+    name: 'sam',
+};
+
+(() => {
+    console.log(this); //window
+}).call(sam);
+
+(function () {
+    console.log(this); // sam
+}.call(sam));
+```
+
+**arrow function**은 es6에 추가된 문법으로 함수를 익명으로 선언하는 또 다른 방법입니다. arrow function은 간결한 표현식 덕분에 재사용 되지 않는 짧은 함수를 표현할 경우 많이 사용되고 있습니다. arrow function의 특징은 모든 함수가 호출 시 자신의 this를 정의하는 것과 달리 **this가 바인딩되지 않는다**는 점입니다. 일반 함수나 metod처럼 this를 참조하지도 않고, call과 apply, bind를 사용해도 명시적 this 바인딩이 불가능합니다. arrow function은 바로 전 context, 즉 **상위 scope의 this를 참조**합니다.
 
 3번 예시의 innerFunc을 arrow function으로 선언하면 innerFunc은 호출되더라도 this를 바인딩하지 않고 상위 스코프인 sayHi의 this를 받기 때문에 출력의 this.name은 person의 Sam이 참조 된 것을 확인 할 수 있습니다.
 
