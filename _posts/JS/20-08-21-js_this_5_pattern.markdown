@@ -2,7 +2,7 @@
 layout: post
 title: '[JS] 5가지 패턴으로 this 문맥 읽기'
 subtitle:
-date: 2020-08-18 09:13:00
+date: 2020-08-21 20:07:00
 author: 'Dev X'
 header-img: 'img/post-bg/post-bg-js.png'
 published: true
