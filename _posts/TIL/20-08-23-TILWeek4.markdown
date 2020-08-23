@@ -20,14 +20,13 @@ tags:
 
 #### 월요일
 
--   **todo**: 스터디, 프로젝트 아키텍쳐 구상, context 포스팅 정리
--
+**todo**:스터디, 프로젝트 아키텍쳐 구상, context 포스팅 정리
 
 ---
 
 #### 화요일
 
--   **todo**: HA test
+**todo**: HA test
 
 ---
 

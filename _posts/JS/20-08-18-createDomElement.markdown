@@ -4,7 +4,7 @@ title: '[JS]Html Element를 생성하는 세가지 방법'
 subtitle: ' 단순 노동을 줄이고 편히 살고 싶다 '
 date: 2020-08-18 09:13:00
 author: 'Dev X'
-header-img: 'img/post-bg/post-bg-dom.jpg'
+header-img: 'img/post-bg/post-bg-js.png'
 published: true
 catalog: true
 tags:
