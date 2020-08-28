@@ -5,7 +5,7 @@ subtitle: '덤으로 hoisting까지'
 date: 2020-08-25 23:21:00
 author: 'Dev X'
 header-img: 'img/post-bg/post-bg-js.png'
-published: false
+published: false 
 catalog: true
 tags:
     - js
@@ -18,11 +18,74 @@ tags:
 
 이 글은 Execution Context의 정의와 자바스크립트 엔진이 Execution Context를 관리하는 흐름에 대해 공부하며 정리했습니다
 
-**ES6를 기준으로 작성된 글입니다**
+**ECMA-262 6th를 기준으로 작성된 글입니다**
 
 ## Execution Context(실행 컨텍스트)란?
 
 자바스크립트 엔진이 코드를 실행하기 위해선 <u>코드에 대한 정보</u>들이 필요합니다. 코드에 선언된 변수와 함수, 스코프, this, arguments 등을 묶어, <u>코드가 실행되는 위치를 설명한다는 뜻의</u> **Execution Context**라고 부릅니다. 자바스크립트 엔진은 Execution Context를 객체로 관리하며 코드를 Execution Context 내에서 실행합니다.
+
+## Execution Context의 종류
+
+실행 컨텍스트의 종류는 아래의 세 가지로 나누어집니다.
+
+**1. Global Execution Context**  
+코드를 실행하며 **가장 처음, 단 한 개만** 생성되는 전역 Context입니다. 생성 시 global object를 생성하며 this 값에 global object를 참조합니다. 전역 실행 컨텍스트는 Call Stack의 가장 바닥에서 유지되며 앱이 종료 될 때 삭제됩니다.
+
+**2. Functional Execution Context**  
+함수가 **실행** 될 때 마다 생성되는 Context입니다. 전역 실행 컨텍스트가 단 한 번만 생성되는 것과 달리, 함수 실행 컨텍스트는 매 실행시마다 새로 생성되며 함수 실행이 종료(return)되면 Call Stack에서 제거됩니다.
+
+**3. Eval Context**  
+[eval](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval) 함수로 실행한 코드의 Context입니다. 보안상 취약한 점이 있어 비권장 함수이기 때문에 이 글에서는 다루지 않습니다.
+
+
+## Execution Context의 관리: CallStack
+
+
+js 엔진은 생성된 Context를 관리하는 목적의 **Call Stack**(호출스택)을 갖고 있습니다. Call Stack은 단일 스레드 형식이기 때문에 단 하나의 Call Stack을 갖고 있습니다. (js가 동기 언어인 이유입니다) js 엔진은 처음 코드를 실행 했을 때 Global Execution Context를 생성해 stack에 가장 먼저 쌓으며, 함수가 실행 또는 종료 될 때마다 stack을 push(추가), pop(제거)합니다.
+
+```js
+
+let name = 'Jason'
+
+function fn1(){
+    fn2()
+}
+
+function fn2(){
+    console.log(`Hi! my name is ${name}`);
+}
+
+fn1();
+
+```
+
+1. 코드의 전역 범위가 실행 될 때 Global Execution Context를 생성 후 Call Stack에 push합니다.
+2. fn1이 실행되며 fn1의 Functional Execution Context가 Call Stack에 push됩니다.
+3. fn2이 실행되며 fn2의 Functional Execution Context가 Call Stack에 push됩니다.
+4. fn2의 실행이 완료되며 fn2의 Functional Execution Context가 Call Stack에서 pop됩니다.
+5. fn1의 실행이 완료되며 fn1의 Functional Execution Context가 Call Stack에서 pop됩니다.
+6. 앱 종료 시 Global Execution Context가 Call Stack에서 pop됩니다.
+   
+
+## Execution Context의 구성
+
+Execution Context는 LexicalEnvironment와 VariableEnvironment의 두 가지 속성을 갖고 있습니다. 
+
+```
+ExecutionContext :{
+    LexicalEnvironment:{
+        Environment Records, 
+        Reference to the outer environment,
+        This binding
+    },
+    VariableEnvironment:{
+        Environment Records, 
+        Reference to the outer environment,
+        This binding
+    }
+}
+```
+
 
 ## Context의 생성 과정
 
