@@ -26,14 +26,14 @@ tags:
 
 #### dom
 
+-   ~~element와 node의 차이(difference between element and node in javascript dom)~~
+-   ~~children과 childNodes의 차이(difference between children and childNodes in javascript dom)~~
+-   ~~remove와 removeChild의 차이 (difference between removeChild and remove in javascript dom)~~
+-   ~~offsetTop~~
+-   ~~offsetWidth~~
 -   ~~[dom과 js의 차이](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction#DOM_and_JavaScript)~~
 -   ~~[createDocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment)~~
 -   ~~[HTML Template](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)~~
--   ~~element와 node의 차이(difference between element and node in javascript dom)~~
--   children과 childNodes의 차이(difference between children and childNodes in javascript dom)
--   remove와 removeChild의 차이 (difference between removeChild and remove in javascript dom)
--   offsetTop
--   offsetWidth
 -   ~~innerHTMl 보안상 단점~~
 -   ~~tweets에 forEach는 되는데, reduce는 안되는 이유 (why array method is not working on nodelist)~~
 -   ~~tweets를 유사 배열에서 배열로 바꾸는 방법 (how to convert nodelist into javascript array)~~
