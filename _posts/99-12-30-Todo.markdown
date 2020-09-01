@@ -12,7 +12,7 @@ tags:
 
 ## Posting Subject
 
--   context 정리 > this 재정리 > scope정리 > async 정리
+-   ~~context 정리 > this 재정리 > scope정리~~ > closuer > async
 -   CleanCode
 -   HTML CSS Series
 -   js 문법 설탕
