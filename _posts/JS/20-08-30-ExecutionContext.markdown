@@ -1,10 +1,10 @@
 ---
 layout: post
-title: '[JS]Execution Context와 Call Stack'
+title: "[JS]Execution Context와 Call Stack"
 subtitle:
 date: 2020-08-30 23:21:00
-author: 'Dev X'
-header-img: 'img/post-bg/post-bg-js.png'
+author: "Dev X"
+header-img: "img/post-bg/post-bg-js.png"
 published: true
 catalog: true
 tags:
@@ -89,12 +89,12 @@ Execution Context는 LexicalEnvironment와 VariableEnvironment의 두 가지 구
 #### scope chain
 
 ```js
-let name = 'Jason';
+let name = "Jason";
 function fn1() {
     console.log(name); //Jason
 }
 function fn2() {
-    let name = 'Peter';
+    let name = "Peter";
     console.log(name); // Peter
     fn1();
 }
@@ -182,10 +182,10 @@ js에서 변수를 선언하는 방식인 **var**와 **let, const**의 차이를
 ```js
 function sayHiOneTime() {
     var isMorning = true;
-    let hi = 'Good morning!';
+    let hi = "Good morning!";
     while (isMorning) {
-        var name = 'Jack';
-        let question = 'How are you?';
+        var name = "Jack";
+        let question = "How are you?";
         console.log(`${name} ${hi} ${question}`);
         isMorning = false;
     }
@@ -224,15 +224,15 @@ Creation 단계에서 코드 실행을 위한 환경 정보 값이 결정되었�
 ### hoisting
 
 ```js
-console.log(v1); // undefiend
+console.log(v1); // undefined
 console.log(v2); // Uncaught ReferenceError: v2 is not defined
-var v1 = 'notVisible1';
-let v2 = 'notVisible2';
+var v1 = "notVisible1";
+let v2 = "notVisible2";
 ```
 
 js 엔진이 코드를 실행(Execution Phase)하기 전 코드의 실행 환경 정보를 구축(Creation Phase)하는 것이 **hoisting**이 이루어지는 이유입니다. hoisting을 설명 할 때 흔히 말해지는 '끌어올림'은 실질적으로 코드의 선언 줄이 변경되는 것이 아닌, Creation 단계에서 변수 식별자가 메모리에 우선적으로 매핑되는 특징을 말합니다.
 
-예를 들어 let과 const로 선언된 변수의 식별자는 Creation Phase에서 메모리 매핑이되긴 하지만 코드 실행 전까지는 값이 할당되지 않습니다. 하지만 var로 선언된 v1의 경우 Creation Phase에서 메모리 매핑을 하며, 초기 값으로 undefiend를 할당했기 때문에 오류 대신 undefined가 출력됩니다.
+예를 들어 let과 const로 선언된 변수의 식별자는 Creation Phase에서 메모리 매핑이되긴 하지만 코드 실행 전까지는 값이 할당되지 않습니다. 하지만 var로 선언된 v1의 경우 Creation Phase에서 메모리 매핑을 하며, 초기 값으로 undefined를 할당했기 때문에 오류 대신 undefined가 출력됩니다.
 
 ### 복습
 
@@ -240,14 +240,14 @@ js 엔진이 코드를 실행(Execution Phase)하기 전 코드의 실행 환경
 
 ```js
 console.log(globalValue);
-var globalValue = 'nowVisible';
+var globalValue = "nowVisible";
 
 function sayHiOneTime() {
     var isMorning = true;
-    let hi = 'Good morning!';
+    let hi = "Good morning!";
     while (isMorning) {
-        var name = 'Jack';
-        let question = 'How are you?';
+        var name = "Jack";
+        let question = "How are you?";
         console.log(`${name} ${hi} ${question}`);
         isMorning = false;
     }

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 'Todo'
-subtitle: '  '
+title: "Todo"
+subtitle: "  "
 date: 2099-12-30 09:13:00
-author: 'Dev X'
-header-img: 'img/post-bg/post-bg-til.jpg'
+author: "Dev X"
+header-img: "img/post-bg/post-bg-til.jpg"
 catalog: true
 tags:
     - todo
@@ -15,7 +15,9 @@ tags:
 -   ~~context 정리 > this 재정리 > scope정리~~ > closuer > async
 -   CleanCode
 -   HTML CSS Series
--   js 문법 설탕
+-   ~~js 문법 설탕~~
+-   실전 Git
+-   자료구조
 
 ## Todos
 

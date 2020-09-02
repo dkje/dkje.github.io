@@ -1,10 +1,10 @@
 ---
 layout: post
-title: '[JS] 5가지 패턴으로 this 문맥 읽기'
-subtitle: '이러니 헷갈릴 수 밖에...'
+title: "[JS] 5가지 패턴으로 this 문맥 읽기"
+subtitle: "이러니 헷갈릴 수 밖에..."
 date: 2020-08-21 20:07:00
-author: 'Dev X'
-header-img: 'img/post-bg/post-bg-js.png'
+author: "Dev X"
+header-img: "img/post-bg/post-bg-js.png"
 published: true
 catalog: true
 tags:
@@ -46,8 +46,8 @@ function clgThis() {
 clgThis();
 
 function clgChar() {
-    let char = 'A';
-    this.char = 'B';
+    let char = "A";
+    this.char = "B";
     console.log(char); //A
 }
 clgChar();
@@ -58,10 +58,10 @@ clgChar();
 #### strict mode
 
 ```js
-'use strict';
+"use strict";
 let global = this;
 function clgThis() {
-    console.log(this); // undefiend
+    console.log(this); // undefined
     console.log(global); //window
 }
 clgThis();
@@ -69,13 +69,13 @@ clgThis();
 
 es5에 추가된 문법 중 **strict mode**(엄격 모드)라는 것이 있습니다. js는 느슨한 언어라는 것이 장점이지만 느슨한 덕에 무시된 에러들을 정확하게 파악하기 힘들다는 단점이 있기도 하죠. strict 모드는 무시되던 오류들을 throw해, 실수로 의도치 않게 일어날 수 있는 문제들을 방지합니다.
 
-strict mode가 바로 잡는 실수 중엔 일반 함수 내의 this 사용이 있습니다. 위의 코드를 보면, 전역에서 사용된 this는 여전히 window를 참조하고 있지만 일반 함수 호출시 사용된 this는 **undefiend**를 참조하고 있습니다. js의 this 생성 규칙에 익숙하지 않은 사람이 일반 함수 호출에서 this를 사용했을시 window를 참조하게 되는 실수를 방지하기 위함이죠. 만약 strict mode의 일반 함수 호출 내에서 global this를 사용하고 싶다면 전역 변수로 global 객체에 this를 할당해 일반 함수 내에서 사용해야 합니다.
+strict mode가 바로 잡는 실수 중엔 일반 함수 내의 this 사용이 있습니다. 위의 코드를 보면, 전역에서 사용된 this는 여전히 window를 참조하고 있지만 일반 함수 호출시 사용된 this는 **undefined**를 참조하고 있습니다. js의 this 생성 규칙에 익숙하지 않은 사람이 일반 함수 호출에서 this를 사용했을시 window를 참조하게 되는 실수를 방지하기 위함이죠. 만약 strict mode의 일반 함수 호출 내에서 global this를 사용하고 싶다면 전역 변수로 global 객체에 this를 할당해 일반 함수 내에서 사용해야 합니다.
 
 ### 2. 메서드 호출 시
 
 ```js
 const person = {
-    name: 'Sam',
+    name: "Sam",
     sayHi() {
         console.log(`Hellow~ My name is ${this.name}!`);
         //Hellow~ My name is Sam! // this는 person
@@ -99,7 +99,7 @@ person.sayHi();
 
 ```js
 const person = {
-    name: 'Sam',
+    name: "Sam",
     sayHi() {
         console.log(`Hellow~ My name is ${this.name}!`);
         //Hellow~ My name is Sam!
@@ -135,7 +135,7 @@ class Person {
         //Hellow~ My name is Sam!
     }
 }
-let sam = new Person('Sam', 20);
+let sam = new Person("Sam", 20);
 sam.sayHi();
 ```
 
@@ -166,7 +166,7 @@ console.log(Person === new Person()); //false
 
 ```js
 const person = {
-    name: 'Sam',
+    name: "Sam",
     sayHi() {
         console.log(`Hellow~ My name is ${this.name}!`);
         //Hellow~ My name is Sam!
@@ -182,7 +182,7 @@ person.sayHi();
 
 ```js
 let sam = {
-    name: 'sam',
+    name: "sam",
 };
 
 (() => {
