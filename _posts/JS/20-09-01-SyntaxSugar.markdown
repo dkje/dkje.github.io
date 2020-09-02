@@ -2,7 +2,7 @@
 layout: post
 title: "[JS]Syntax Sugar(문법 설탕)"
 subtitle: " 자스인듯~ 자스아닌듯~ 자스같은 너~ "
-date: 2020-09-01 23:16:00
+date: 2020-09-02 23:16:00
 author: "Dev X"
 header-img: "img/post-bg/post-bg-js.png"
 published: true
