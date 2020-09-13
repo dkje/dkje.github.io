@@ -13,7 +13,8 @@ tags:
 ## Posting Subject
 
 -   ~~context 정리 > this 재정리 > scope정리~~ > closuer > async
--   CleanCode
+-   CleanCode 함수편
+-   ~~prototype 포스팅~~
 -   HTML CSS Series
 -   ~~js 문법 설탕~~
 -   실전 Git

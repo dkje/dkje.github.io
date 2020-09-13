@@ -1,0 +1,43 @@
+---
+layout: post
+title: "[TIL] 코드스테이츠 7주차"
+subtitle: "  "
+date: 2020-09-14 09:13:00
+author: "Dev X"
+header-img: "img/post-bg/post-bg-til.jpg"
+catalog: true
+tags:
+    - TIL
+---
+
+## Solo Week
+
+#### 일요일
+
+-   치팅 데이.
+
+-   DFS BFS 강의 좀 찾아보고 쉬었다.
+
+---
+
+#### 월요일
+
+---
+
+#### 화요일
+
+---
+
+#### 수요일
+
+---
+
+#### 목요일
+
+---
+
+#### 금요일
+
+---
+
+#### 토요일
