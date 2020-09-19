@@ -41,11 +41,9 @@ tags:
 
 ## Execution Context의 관리: CallStack
 
-js 엔진은 생성된 Context를 관리하는 목적의 **Call Stack**(호출스택)을 갖고 있습니다. Call Stack은 LIFO(Last In First Out)구조의 단일 스레드 형식이기 때문에 단 하나만 존재합니다. (js가 동기 언어인 이유입니다) js 엔진은 전역 범위의 코드를 실행하며 Global Execution Context를 생성해 stack에 push합니다. 그리고 함수가 실행 또는 종료 될 때마다 Global Execution Context의 위로 Functional Execution Context stack을 **push**(추가), **pop**(제거)합니다.
+js 엔진은 생성된 Context를 관리하는 목적의 **Call Stack**(호출스택)을 갖고 있습니다. JS는 단일 스레드 형식이기 때문에 런타임에 단 하나의 Call Stack이 존재합니다. js 엔진은 전역 범위의 코드를 실행하며 Global Execution Context를 생성해 stack에 push합니다. 그리고 함수가 실행 또는 종료 될 때마다 Global Execution Context의 위로 Functional Execution Context stack을 **push**(추가), **pop**(제거)합니다.
 
 Call Stack은 최대 stack 사이즈가 정해져있습니다. Call Stack에 쌓인 Context Stack이 최대치를 넘게 될 경우 'RangeError: Maximum call stack size exceeded'라는 에러가 발생합니다. 이 에러는 **Stack Overflow**라고 부르기도 합니다.
-
-<span style="color:grey">자료구조 stack에 대해 더 알고 싶다면 [이 링크](https://medium.com/@jinseok.choi/%EC%8A%A4%ED%83%9D-stack-48a22e52268b)를 참고해주세요</span>
 
 ![callStack의 예시 이미지](https://i.ibb.co/zZ9zpDC/Context-Stack.gif)
 
