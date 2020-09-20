@@ -12,13 +12,14 @@ tags:
 
 ## Posting Subject
 
--   ~~context 정리 > this 재정리 > scope정리~~ > closuer > async
+-   ~~context 정리 > this 재정리 > scope정리 > closuer~~ > async
+-   ★자료 구조와 시간 복잡도
 -   CleanCode 함수편
--   ~~prototype 포스팅~~
--   HTML CSS Series
--   ~~js 문법 설탕~~
+-   예외처리
 -   실전 Git
--   자료구조
+-   HTML CSS Series
+-   ~~prototype 포스팅~~
+-   ~~js 문법 설탕~~
 
 ## Todos
 
