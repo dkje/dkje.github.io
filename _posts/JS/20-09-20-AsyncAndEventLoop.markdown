@@ -169,9 +169,16 @@ Queue.prototype.doCheckPoint = function () {
 
 위의 두 조건이 모두 true일 때, 이벤트 루프는 **doCheckPoint**의 과정을 통해 Queue의 가장 오래된 Task를 CallStack으로 전달합니다. checkPoint는 우선 순위가 높은 Queue를 대상으로 먼저 실행하며, Queue가 완전히 비었을 때 차순위 Queue의 checkpoint가 실행됩니다. 예를들어, 차순위 Task가 대기 중인 상황에 MicroTask가 추가된다면 MicroTask를 우선적으로 처리합니다.
 
-## 비동기 실행시 Runtime의 예시
+## 비동기 실행시 Runtime의 동작
 
 <iframe src="https://slides.com/kim3333/deck/embed" width="100%" height="500px" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+**요약**
+
+-   callStack(Single Thread): 동기적으로 작업을 실행한다. 필요에 따라 Web API를 호출.
+-   WebAPI(Multi Thread): 여러 쓰레드를 이용해 비동기적으로 작업을 실행한다. 작업이 완료되면 Task(callback)를 Queue로 전달한다.
+-   Queue: WebAPI에서 작업을 마친 Task들이 대기하는 Container. 여러개가 존재하며 Queue에 따라 처리 우선 순위가 있다.
+-   EventLoop: callStack의 작업을 모두 마치고 나면 최우선 순위의 Task를 callStack에 추가한다.
 
 ## [Posting Reference]
 
