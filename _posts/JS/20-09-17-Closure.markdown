@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[JS] Closure와 Execution Context"
+title: "[JS] Closure와 Garbage Collection"
 subtitle: "  "
 date: 2020-09-18 17:16:00
 author: "Dev X"
@@ -10,8 +10,7 @@ catalog: true
 tags:
     - JS
     - closure
-    - context
-    - scope
+    - garbage collection
 ---
 
 [[JS]Execution Context와 Call Stack](https://dkje.github.io/2020/08/30/ExecutionContext/)에서 이어지는 포스팅입니다. Context와 관련된 자세한 내용은 이전 글에 정리했기 때문에 이 글에서는 closure와 관련된 내용들을 중점적으로 정리했습니다.
