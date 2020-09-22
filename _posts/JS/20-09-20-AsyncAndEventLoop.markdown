@@ -175,10 +175,10 @@ Queue.prototype.doCheckPoint = function () {
 
 **요약**
 
--   callStack(Single Thread): 동기적으로 작업을 실행한다. 필요에 따라 Web API를 호출.
--   WebAPI(Multi Thread): 여러 쓰레드를 이용해 비동기적으로 작업을 실행한다. 작업이 완료되면 Task(callback)를 Queue로 전달한다.
--   Queue: WebAPI에서 작업을 마친 Task들이 대기하는 Container. 여러개가 존재하며 Queue에 따라 처리 우선 순위가 있다.
--   EventLoop: callStack의 작업을 모두 마치고 나면 최우선 순위의 Task를 callStack에 추가한다.
+-   **callStack(Single Thread)**: 동기적으로 작업을 실행한다. 필요에 따라 Web API를 호출.
+-   **WebAPI(Multi Thread)**: 여러 쓰레드를 이용해 비동기적으로 작업을 실행한다. 작업이 완료되면 Task(callback)를 Queue로 전달한다.
+-   **Queue**: WebAPI에서 작업을 마친 Task들이 대기하는 Container. 여러개가 존재하며 Queue에 따라 처리 우선 순위가 있다.
+-   **EventLoop(Single Thread)**: callStack의 작업을 모두 마치고 나면 최우선 순위의 Task를 하나씩 callStack에 추가한다.
 
 ## [Posting Reference]
 
