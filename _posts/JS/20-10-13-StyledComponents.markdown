@@ -4,7 +4,7 @@ title: "[React] Styled Components 사용기"
 subtitle: " "
 date: 2020-10-13 08:56:00
 author: "Dev X"
-header-img: "img/post-bg/post-bg-react.png"
+header-img: "img/post-bg/post-bg-styled-components.png"
 published: true
 catalog: true
 tags:
