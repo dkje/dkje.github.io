@@ -14,35 +14,33 @@ tags:
   - Project
 ---
 
+[이 링크는 팀원들과 나눈 회고담입니다](https://www.notion.so/What-s-Dat-2-92c0350f3bf94b91900c749dac9a4a51)
 [Firebase와 React로 웹게임 만든 썰1]()에서 이어집니다.<br/>
+
 그렇게 UI 작업은 마무리 되었습니다. 그 뒤로 우리가 갖고 있던 계획은 이렇습니다.
 
 > React가 Redux를 대체하기 위해 Context를 만들으니,<br/>
 > hook과 Context만 있다면 Redux없이 상태관리가 가능 할 것이다!
 
-
 ### 🧾Context 구조도
 
 ![context](https://i.ibb.co/W51BMzZ/context.png)
 
-
 Context를 Store로 사용하기로 하고 발견한 점은 **반드시 Global Store를 사용하지 않아도 된다**는 점입니다. 예를 들면 User와 RoomContext는 라우트 가드를 위해 컴포넌트 최상단에 배치했지만, Game이 진행될때만 사용되는 GameContext는 Context가 필요한 Component의 바로 위에 배치해도 문제가 없었습니다. Redux를 사용했을땐 Global Store가 점점 비대해지고 때때로 불필요해진 data를 유지해야 했던 문제점이 있었습니다. 하지만 Context는 Provider 하위의 Component가 언마운트 될 때 함께 삭제되므로 Store가 점점 무거워지는 것에 대한 부담감을 덜 수 있었습니다.
-
 
 **GlobalContext.js**<br/>
 GlobalContext는 모든 Provider를 통합하는 역할을 합니다.<br/>
 서버에서 받아올 데이터를 저장할 Context는 물론 사용 중인 라이브러리에서 필요한 기타 Provider도 함께 정리했습니다.
+
 ```js
 const GlobalContextProvider = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <UserContextProvider>
-          <RoomContextProvider>
-            <Router>
-              {children}
-            </Router>
-          </RoomContextProvider>
+        <RoomContextProvider>
+          <Router>{children}</Router>
+        </RoomContextProvider>
       </UserContextProvider>
     </ThemeProvider>
   );
@@ -53,6 +51,7 @@ export default GlobalContextProvider;
 
 **GameContext.js**<br/>
 Context는 fetch가 이루어지는 단위로 분류되었습니다. 액션의 단위가 작았기 때문에 별도의 reducer 처리는 하지 않았습니다.
+
 ```js
 const GameContext = createContext();
 export const useGame = () => {
@@ -83,6 +82,7 @@ const GameContextProvider = ({ children }) => {
   );
 };
 ```
+
 <br/><br/><br/>
 
 ### 😱불시에 재랜더링되는 컴포넌트들
@@ -102,6 +102,7 @@ const GameContextProvider = ({ children }) => {
 라고 입력되고 있었습니다.
 
 ![실시간 데이터 전달](https://i.ibb.co/GTG5Fvs/touchicon-180.png)
+
 <center>firestore에서 실시간으로 game data를 받아오던 방식을 도식화한 그림입니다.</center>
 
 저희 앱은 firestore의 특정 doc에 update가 일어날 때마다 변경된 data를 local에 전달받는 onSnapshot이라는 기능을 이용하고 있었습니다. 즉, 다른 유저가 게임 doc을 업데이트 할 때마다 trigger가 실행되며, 내 화면에서도 전달받은 data를 setState하고 있었던 것이죠.
@@ -121,7 +122,6 @@ if(user의 화면이 재렌더링되도 괜찮은 상황일 때){
 
 이 방식의 문제는 localState와 remoteData가 완전히 동기화되지 않는다는 것입니다. 만약 채팅화면이 존재했다면 반드시 update가 일어날때마다 화면이 재렌더 되는 것이 옳았을 것입니다. 차후 그런 기능이 추가된다면 Remote에선 Chat을 위한 doc을 별도로 분리하고 Local에선 해당 Context와 Component를 별도의 트리에서 관리해야겠다는 것이 현재 계획입니다.
 
-
 ### 👋유저 접속 상태 구현하기
 
 ![유저 접속상태 구현](https://i.ibb.co/HtCNGD9/1.png)
@@ -136,7 +136,6 @@ if(user의 화면이 재렌더링되도 괜찮은 상황일 때){
 4. Client: 게임이 강제 종료되었다면 유저에게 이를 알린다.
 
 구현 방법을 찾은 후엔 코드로 옮기는데 큰 문제는 없었습니다.
-
 
 #### 🔥Firebase로 앱 개발한 후기
 
